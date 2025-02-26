@@ -5,21 +5,25 @@ import './Formulario.css';
 import { useState } from 'react';
 
 const Formulario = (props) => {
-    const times = ['Programação', 'Front-End', 'Data Science', 'Devops', 'Ux e Design', 'Mobile', 'Inovação e Gestão'];
-    
-    const [nome, setNome] = useState();
-    const [cargo, setCargo] = useState();
-    const [imagem, setImagem] = useState();
-    const [time, setTime] = useState();
+    const [nome, setNome] = useState('');
+    const [cargo, setCargo] = useState('');
+    const [imagem, setImagem] = useState('');
+    const [time, setTime] = useState('');
 
     const aoSalvar = (evento) => {
         evento.preventDefault();
+
         props.aoColaboradorCadastrado({
             nome,
             cargo,
             imagem,
             time
-        })
+        });
+
+        setNome('');
+        setCargo('');
+        setImagem('');
+        setTime('');
     };
 
     return (
@@ -49,7 +53,7 @@ const Formulario = (props) => {
                 <ListaSuspensa 
                     obrigatorio={true} 
                     label="Time" 
-                    itens={times}
+                    itens={props.nomeDosTimes}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />

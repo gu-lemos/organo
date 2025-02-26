@@ -1,0 +1,23 @@
+.rodape-pagina {
+    background-color: #6278F7;
+    background-image: url(../../../public/imagens/fundo.png);
+    background-size: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    align-items: center;
+}
+
+.rodape-pagina .redes-sociais img {
+    width: 32px;
+    padding: 10px;
+}
+
+.rodape-pagina .redes-sociais .logo img {
+    width: 166px;
+}
+
+.rodape-pagina .desenvolvedor {
+    color: #fff;
+    font-size: 20px;
+}
