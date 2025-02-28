@@ -6,10 +6,49 @@
     margin: 80px 50px;
 }
 
+/* Estilização padrão dos formulários */
 .formulario form {
     background-color: #F2F2F2;
     border-radius: 20px;
     padding: 36px 64px;
     flex: 1;
-    box-shadow: 8px 8px 16 rgba(0, 0, 0, 0.08);
+    min-width: 300px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .formulario {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 20px;
+    }
+
+    .formulario form {
+        width: 80%;
+        padding: 30px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+    .formulario {
+        margin: 30px 10px;
+    }
+
+    .formulario form {
+        padding: 20px;
+    }
+
+    .formulario input,
+    .formulario select {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .formulario button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
 }
