@@ -47,17 +47,8 @@ function App() {
       imagem: 'https://github.com/gu-lemos.png',
       time: 'Front-End',
       favorito: true
-    },
-    {
-      id: uuidv4(),
-      nome: 'Monique Zanini',
-      cargo: 'Vendas',
-      imagem: 'https://media.licdn.com/dms/image/v2/D4D03AQETzop-d6ItVg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1706041210533?e=1746057600&v=beta&t=ZpVn9A9eELqeOp_jg3fgkupRwUh1Gi4R5iDxyirH3YU',
-      time: 'Inovação e Gestão',
-      favorito: true
     }
   ])
-
 
   const [colaboradores, setColaboradores] = useState(colaboradoresInicias);
 
@@ -119,6 +110,7 @@ function App() {
         {times.map((time, indice) => 
           <Time 
             key={indice} 
+            time={time}
             id={time.id}
             nome={time.nome} 
             cor={time.cor}

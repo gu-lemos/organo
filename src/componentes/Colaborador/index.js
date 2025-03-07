@@ -2,9 +2,9 @@ import { IoCloseCircle } from "react-icons/io5";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import './Colaborador.css';
 
-const Colaborador = ({ id, nome, imagem, cargo, corDeFundo, favorito, aoDeletar, aoFavoritar }) => {
+const Colaborador = ({ colaborador, corDeFundo, aoDeletar, aoFavoritar }) => {
     function favoritar() {
-        aoFavoritar(id)
+        aoFavoritar(colaborador.id)
     }
 
     const propsFavorito = {
@@ -17,16 +17,19 @@ const Colaborador = ({ id, nome, imagem, cargo, corDeFundo, favorito, aoDeletar,
             <IoCloseCircle 
                 size={25} 
                 className='deletar'
-                onClick={() => aoDeletar(id)} 
+                onClick={() => aoDeletar(colaborador.id)} 
             />
-            <div className='cabecalho' style={ { backgroundColor:corDeFundo }}>
-                <img src={imagem} alt={nome}></img>
+            <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
+                <img 
+                    src={colaborador.imagem || '../imagens/sem-foto.png'} 
+                    alt={colaborador.nome} 
+                />
             </div>
             <div className='rodape'>
-                <h4>{nome}</h4>
-                <h5>{cargo}</h5>
+                <h4>{colaborador.nome}</h4>
+                <h5>{colaborador.cargo}</h5>
                 <div className="favoritar">
-                    {favorito 
+                    {colaborador.favorito 
                         ? <FaHeart {...propsFavorito} color="#ff0000"/> 
                         : <FaRegHeart {...propsFavorito} />
                     }
