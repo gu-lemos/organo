@@ -42,7 +42,7 @@ const Time = ({ time, colaboradores, mudarCor, aoDeletar, aoFavoritar }: TimePro
       </div>
     </section>
   ) : (
-    ""
+    <></>
   );
 };
 
