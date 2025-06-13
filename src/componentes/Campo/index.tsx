@@ -3,7 +3,7 @@ import "./campo.css";
 interface CampoProps {
   placeholder: string;
   aoAlterado: (valor: string) => void;
-  tipo?: string;
+  tipo?: "text" | "password" | "date" | "email" | "number" | "color",
   label: string;
   valor: string;
   obrigatorio?: boolean;

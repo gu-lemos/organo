@@ -14,8 +14,6 @@ interface TimeProps {
 }
 
 const Time = ({ time, colaboradores, mudarCor, aoDeletar, aoFavoritar }: TimeProps) => {
-  console.log({time});
-  console.log({colaboradores});
   const css = { backgroundColor: hexToRgba(time.cor, "0.6") };
 
   return colaboradores.length > 0 ? (

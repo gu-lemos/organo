@@ -47,6 +47,7 @@ function App() {
       cargo: 'Desenvolvedor Full-Stack',
       imagem: 'https://github.com/gu-lemos.png',
       time: 'Front-End',
+      data: "2025-06-06",
       favorito: true
     }
   ])
